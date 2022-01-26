@@ -1,0 +1,23 @@
+From 2a16d5b676f52077e5627e8457253acfc8a43d83 Mon Sep 17 00:00:00 2001
+From: Christoph Fritz <chf@fritzc.com>
+Date: Wed, 26 Jan 2022 04:13:41 +0100
+Subject: [PATCH] quirk: disable rockchip_show_logo()
+
+---
+ arch/arm/mach-rockchip/board.c | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/arch/arm/mach-rockchip/board.c b/arch/arm/mach-rockchip/board.c
+index 446b945fa89d..688eb9e3c06c 100644
+--- a/arch/arm/mach-rockchip/board.c
++++ b/arch/arm/mach-rockchip/board.c
+@@ -374,9 +374,6 @@ int board_late_init(void)
+ #ifdef CONFIG_DM_CHARGE_DISPLAY
+ 	charge_display();
+ #endif
+-#ifdef CONFIG_DRM_ROCKCHIP
+-	rockchip_show_logo();
+-#endif
+ #ifdef CONFIG_ROCKCHIP_EINK_DISPLAY
+ 	rockchip_eink_show_uboot_logo();
+ #endif
