@@ -7,7 +7,7 @@ SRC_URI = " \
         git://github.com/tci-development/kernel-tci-e04.git;user=git;protocol=ssh;branch=master \
         file://${THISDIR}/files/cgroups.cfg \
 "
-SRCREV = "f54d3e2b59eee76810333302a82898b43c3cc837"
+SRCREV = "226e4d29d691950fafb727eb8dbef7cf8859028c"
 S = "${WORKDIR}/git"
 
 KERNEL_VERSION_SANITY_SKIP = "1"
