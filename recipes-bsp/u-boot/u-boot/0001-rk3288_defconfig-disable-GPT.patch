@@ -1,0 +1,34 @@
+From 0119f6eb7efb9ddf7382286215f88fc1d1ac090e Mon Sep 17 00:00:00 2001
+From: Christoph Fritz <chf@fritzc.com>
+Date: Fri, 11 Mar 2022 12:14:40 +0100
+Subject: [PATCH] rk3288_defconfig: disable GPT
+
+---
+ configs/rk3288_defconfig | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/configs/rk3288_defconfig b/configs/rk3288_defconfig
+index e003189e9e56..ebbd85a6ae99 100644
+--- a/configs/rk3288_defconfig
++++ b/configs/rk3288_defconfig
+@@ -28,7 +28,6 @@ CONFIG_CMD_DTIMG=y
+ # CONFIG_CMD_XIMG is not set
+ # CONFIG_CMD_FLASH is not set
+ # CONFIG_CMD_FPGA is not set
+-CONFIG_CMD_GPT=y
+ # CONFIG_CMD_LOADB is not set
+ # CONFIG_CMD_LOADS is not set
+ CONFIG_CMD_BOOT_ANDROID=y
+@@ -42,8 +41,7 @@ CONFIG_CMD_PMIC=y
+ CONFIG_CMD_REGULATOR=y
+ # CONFIG_SPL_DOS_PARTITION is not set
+ # CONFIG_ISO_PARTITION is not set
+-CONFIG_EFI_PARTITION_ENTRIES_NUMBERS=64
+-# CONFIG_SPL_EFI_PARTITION is not set
++# CONFIG_EFI_PARTITION is not set
+ CONFIG_SPL_PARTITION_UUIDS=y
+ CONFIG_RKPARM_PARTITION=y
+ CONFIG_SPL_OF_CONTROL=y
+-- 
+2.20.1
+
