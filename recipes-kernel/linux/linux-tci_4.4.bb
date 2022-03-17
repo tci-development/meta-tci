@@ -6,6 +6,8 @@ inherit freeze-rev local-git
 SRC_URI = " \
         git://github.com/tci-development/kernel-tci-e04.git;user=git;protocol=ssh;branch=master \
         file://${THISDIR}/files/cgroups.cfg \
+        file://${THISDIR}/files/0001-rk3288_linux_4n_defconfig-adapt.patch \
+        file://${THISDIR}/files/0001-rk3288_linux_4n_defconfig-adapt2.patch \
 "
 SRCREV = "226e4d29d691950fafb727eb8dbef7cf8859028c"
 S = "${WORKDIR}/git"
