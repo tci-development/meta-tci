@@ -17,7 +17,7 @@ LINUX_VERSION = "4.4.154"
 
 PV = "${LINUX_VERSION}"
 
-SRC_URI_append += "${@bb.utils.contains('IMAGE_FSTYPES', 'ext4', \
+SRC_URI:append += "${@bb.utils.contains('IMAGE_FSTYPES', 'ext4', \
 		   ' file://${THISDIR}/files/ext4.cfg', \
 		   '', \
 		   d)}"
